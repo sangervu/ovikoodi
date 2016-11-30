@@ -16,7 +16,19 @@
     <script type="text/javascript" src="./js/jquery.mobile-1.4.3.js"></script>
     
     <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="ovikoodi.js"></script>
+    
+    <script type="text/javascript">
+        function oviKoodi() {
+        
+     	var monthNames = ["tammikuu", "helmikuu", "maaliskuu", "huhtikuu", "toukokuu", "kesäkuu",
+ 		"heinäkuu", "elokuu", "syyskuu", "lokakuu", "marraskuu", "jolukuu"
+		];
+		var date = new Date();
+        document.getElementById("ovikoodi").innerHTML = "5963";
+        document.getElementById("kuukausi").innerHTML = monthNames[date.getMonth()];
+        }
+        window.onload = oviKoodi;
+     </script>
     
 </head>
 
@@ -27,13 +39,13 @@
         </div><!-- /header -->
 		
 		<div data-role="content" data-theme="a">
-        <form>Ovikoodi</form>
+        <form id=kuukausi style="font-size:200%;">Ovikoodi</form>
        
-        <p style="font-size:700%;">12345</p>
+        <p id=ovikoodi style="font-size:700%;">12345</p>
         
         
        
-        	<button id="button-1"
+        	<button onclick="sendInfo()" id="button-1"
         		class="button icon-left ion-alert-circled button-royal">
         		Lähetä ovikoodi ja osoite
         	</button>

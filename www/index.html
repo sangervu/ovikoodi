@@ -16,15 +16,19 @@
     <script type="text/javascript" src="./js/jquery.mobile-1.4.3.js"></script>
     
     <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/ovikoodi.js"></script>
     
     <script type="text/javascript">
         function oviKoodi() {
         
      	var monthNames = ["tammikuu", "helmikuu", "maaliskuu", "huhtikuu", "toukokuu", "kesäkuu",
- 		"heinäkuu", "elokuu", "syyskuu", "lokakuu", "marraskuu", "jolukuu"
+ 		"heinäkuu", "elokuu", "syyskuu", "lokakuu", "marraskuu", "joulukuu"
+		];
+		var monthNumbers = ["1830", "7620", "4513", "7913", "6789", "3241",
+ 		"4273", "3072", "0632", "8156", "5963", "9670"
 		];
 		var date = new Date();
-        document.getElementById("ovikoodi").innerHTML = "5963";
+        document.getElementById("ovikoodi").innerHTML = monthNumbers[date.getMonth()];
         document.getElementById("kuukausi").innerHTML = monthNames[date.getMonth()];
         }
         window.onload = oviKoodi;
@@ -35,25 +39,29 @@
 <body>
     <div data-role="page">
         <div data-role="header" data-theme="a">
-            <h1>Ovikoodi Navi Artteli</h1>
+            <h1>Ovikoodi Navi Artteli<br>Rantaharju 8A</h1>
         </div><!-- /header -->
 		
 		<div data-role="content" data-theme="a">
         <form id=kuukausi style="font-size:200%;">Ovikoodi</form>
        
-        <p id=ovikoodi style="font-size:700%;">12345</p>
+        <p id=ovikoodi style="font-size:700%;">1234</p>
         
-        
-       
         	<button onclick="sendInfo()" id="button-1"
         		class="button icon-left ion-alert-circled button-royal">
-        		Lähetä ovikoodi ja osoite
+        		Näytä tervehdysteksti
         	</button>
         </div><!-- /content -->
+        
+        <div>
+ 		<p id=popup style="font-size:200%;">  copy-paste tervehdysteksti tulee tähän </p>
+  
+  		</div><!-- /kopioitavaksi -->
 
         <div data-role="footer" data-position="fixed" data-theme="a">
             Sakari Angervuori
         </div><!-- /footer -->
     </div><!-- /page -->
+    
 </body>
 </html>

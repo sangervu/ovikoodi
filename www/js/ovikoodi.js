@@ -16,5 +16,9 @@ function sendInfo(){
 	"Tervetuloa!";
 	
 	document.getElementById("popup").innerHTML = popUpText;
-	document.getElementById("popup").setAttribute("href", "http://maps.google.com/maps?q=Rantaharju,+Helsinki,+Finland");
+	
+	var anchor = document.getElementById("popup");  
+	var att = document.createAttribute("href");
+	att.value = "http://maps.google.com/maps?q=Rantaharju 17 A,+Helsinki,+Finland";
+	anchor.setAttributeNode(att);
 }

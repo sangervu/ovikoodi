@@ -11,11 +11,10 @@ function sendInfo(){
 	var popUpText;
 	
 	popUpText = "Pirkko ja Sakari" + "<br>" 
-		+"Rantaharju 8 A 14, Espoo" + "<br>" 
-		+"Ovikoodi = " +monthNumbers[date.getMonth()].bold().fontcolor("red") + "<br>" +
-		"Tervetuloa!";
+	+"<a>Rantaharju 8 A 14, Espoo</a>" + "<br>" 
+	+"Ovikoodi = " +monthNumbers[date.getMonth()].bold().fontcolor("red") + "<br>" +
+	"Tervetuloa!";
 	
 	document.getElementById("popup").innerHTML = popUpText;
-	/*document.getElementById("ovikoodi").innerHTML = monthNumbers[date.getMonth()];
-	*/
+	document.getElementById("popup").setAttribute("href", "http://maps.google.com/maps?q=Rantaharju,+Helsinki,+Finland");
 }

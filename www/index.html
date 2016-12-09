@@ -33,6 +33,17 @@
         }
         window.onload = oviKoodi;
      </script>
+     
+     <style>
+		.city {
+    	float: left;
+    	margin: 5px;
+    	padding: 15px;
+    	max-width: 400px;
+    	height: 300px;
+    	border: 1px solid black;
+		} 
+	</style>
     
 </head>
 
@@ -42,7 +53,7 @@
             <h1>Ovikoodi Navi Artteli<br>Rantaharju 8A</h1>
         </div><!-- /header -->
 		
-		<div data-role="content" data-theme="a">
+		<div class ="city" data-role="content" data-theme="a">
         <form id=kuukausi style="font-size:200%;">Ovikoodi</form>
        
         <p id=ovikoodi style="font-size:700%;">1234</p>
@@ -53,7 +64,7 @@
         	</button>
         </div><!-- /content -->
         
-        <div>
+        <div class="city">
  		<p id=popup style="font-size:200%;">  copy-paste tervehdysteksti tulee tähän </p>
   
   		</div><!-- /kopioitavaksi -->

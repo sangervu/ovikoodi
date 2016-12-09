@@ -10,10 +10,10 @@ function sendInfo(){
 	
 	var popUpText;
 	
-	popUpText = "Pirkko ja Sakari" + "<br>" 
+	popUpText = "<html>"+"Pirkko ja Sakari" + "<br>" 
 	+"<a>Rantaharju 8 A 14, Espoo</a>" + "<br>" 
 	+"Ovikoodi = " +monthNumbers[date.getMonth()].bold().fontcolor("red") + "<br>" +
-	"Tervetuloa!";
+	"Tervetuloa!"+ "</html>";
 	
 	document.getElementById("popup").innerHTML = popUpText;
 	
